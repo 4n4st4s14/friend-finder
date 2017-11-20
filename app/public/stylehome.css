@@ -1,0 +1,18 @@
+
+body {
+  background: url("../images/dogs.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron {
+  margin-top: 20%;
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}

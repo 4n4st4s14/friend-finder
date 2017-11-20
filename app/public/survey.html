@@ -5,13 +5,15 @@
   <meta charset="utf-8">
 
   <title>Survey Questions</title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-<script src="https://code.jquery.com/jquery.js"></script>
 
 
 </head>
@@ -40,7 +42,7 @@
       </div>
         <br>
       <h4>Question 1</h4>
-      <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+      <h6>No need to hurry. No need to sparkle. No need to be anybody but oneself.</h6>
       <select data-placeholder="" class="chosen-select" id="q1" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -51,7 +53,7 @@
       </select>
         <br>
       <h4>Question 2</h4>
-      <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
+      <h6>It is absurd to divide people into good and bad. People are either charming or tedious.</h6>
       <select data-placeholder="" class="chosen-select" id="q2" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -62,7 +64,7 @@
       </select>
         <br>
       <h4>Question 3</h4>
-      <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+      <h6>Nature is to zoos as God is to churches.</h6>
       <select data-placeholder="" class="chosen-select" id="q3" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -73,7 +75,7 @@
       </select>
         <br><br>
       <h4>Question 4</h4>
-      <h6>You rarely do something just out of sheer curiosity.</h6>
+      <h6>Respect was invented to cover the empty place where love should be.</h6>
       <select data-placeholder="" class="chosen-select" id="q4" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -84,7 +86,7 @@
       </select>
         <br><br>
       <h4>Question 5</h4>
-      <h6>People can rarely upset you.</h6>
+      <h6>Logical validity is not a guarantee of truth.</h6>
       <select data-placeholder="" class="chosen-select" id="q5" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -95,7 +97,7 @@
       </select>
         <br><br>
       <h4>Question 6</h4>
-      <h6>It is often difficult for you to relate to other people’s feelings.</h6>
+      <h6>The path is revealed in the treading.</h6>
       <select data-placeholder="" class="chosen-select" id="q6" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -106,7 +108,8 @@
       </select>
         <br><br>
       <h4>Question 7</h4>
-      <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+      <h6>In the beginning the Universe was created.
+This has made a lot of people very angry and been widely regarded as a bad move.</h6>
       <select data-placeholder="" class="chosen-select" id="q7" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -117,7 +120,7 @@
       </select>
         <br><br>
       <h4>Question 8</h4>
-      <h6>You rarely get carried away by fantasies and ideas.</h6>
+      <h6>The secret to good self esteem is to lower your expectations to the point where they're already met.</h6>
       <select data-placeholder="" class="chosen-select" id="q8" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -128,7 +131,7 @@
       </select>
         <br><br>
       <h4>Question 9</h4>
-      <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6>
+      <h6>If you are immune to boredom, there is literally nothing you cannot accomplish.</h6>
       <select data-placeholder="" class="chosen-select" id="q9" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -139,7 +142,7 @@
       </select>
         <br><br>
       <h4>Question 10</h4>
-      <h6>You feel more energetic after spending time with a group of people.</h6>
+      <h6>The truth will set you free, but not until it's finished with you.</h6>
       <select data-placeholder="" class="chosen-select" id="q10" >
         <option value></option>
         <option value="1">1 (Strongly Disagree)</option>
@@ -160,32 +163,93 @@
     </form>
 
   </div>
+<!--start modal -->
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">x</button>
+        <h2 class="modal-title"><strong>Best Friend</strong></h2>
+      </div>
+
+      <div class="modal-body">
+        <h2 id="friendName"></h2>
+        <img id="friendImg" src="" alt="">
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <script type="text/javascript">
 
+  //modal code
+
+  var config = {
+  '.chosen-select': {},
+  '.chosen-select-deselect': {
+    allow_single_deselect: true
+  },
+  '.chosen-select-no-single': {
+    disable_search_threshold: 10
+  },
+  '.chosen-select-no-results': {
+    no_results_text: 'Oops, nothing found!'
+  },
+  '.chosen-select-width': {
+    width: "50%"
+  }
+}
+
 //on click, create object for quiz results
-  $(".submit").on("click", function(){
+  $(".submit").on("click", function(event){
     event.preventDefault();
-      var newFriend = {
+
+    //validate format
+    function validate(){
+
+      var valid = true;
+
+      $('.form-control').each(function(){
+        if ($(this).val()=== "")
+        valid = false;
+      })
+      return valid;
+}
+
+if(validate()== true){
+
+
+var userData = {
         name: $('#user_name').val().trim(),
         photo: $('#user_photo').val().trim(),
-        scores : [$('#q1').val(), $('#q2').val(),$('#q3').val(),$('#q4').val(),$('#q5').val(), $('#q6').val(),$('#q7').val(),$('#q8').val(),$('#q9').val(),$('#q10').val()]
-      };
-      console.log(newFriend);
+        scores : [$('#q1').val(), $('#q2').val(),$('#q3').val(),$('#q4').val(),$('#q5').val(), $('#q6').val(),$('#q7').val(),$('#q8').val(),$('#q9').val(),$('#q10').val(),]
+      }
+      console.log(userData);
       //grab url
       var currentURL = window.location.origin;
         console.log(currentURL);
       //post to friends.js
 
-      $.post(currentURL + "/api/friends", newFriend, function(data){
-        //  friendArr.push(newFriend);
+      $.post(currentURL + "/api/friends", userData, function(data){
+        //  friendArr.push(userData);
+          $('#friendName').text(data.name);
+          $('#friendImg').attr("src", data.photo);
+          $('#modal').modal('toggle');
+          //res.json(userData);
+      });
+    } else {
+      alert("Please complete the questionaire before submitting!");
+    }
 
-          //res.json(newFriend);
-      })
-
+  return false;
   });
+
 
   </script>
 </body>
