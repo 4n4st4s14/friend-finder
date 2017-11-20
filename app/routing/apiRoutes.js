@@ -71,19 +71,19 @@ module.exports = function (app) {
          console.log(friendData[i].name);
           difference = 0;
 
-         for(var j = 0; j< friendData[i].scores[j]; i++){
-           //add together the absolute values of the differences between each //array location
-
-           difference += Math.abs(parseInt(userScores[j]) - parseInt(friendData[i].scores[j]));
-
-           console.log(difference);
-
-           if(difference <= bestFriend.setDiff){
-             bestFriend.name = friendData[i].name;
-             bestFriend.photo = friendData[i].photo;
-             bestFriend.setDiff = difference;
-           }
-         }
+        //  for(var j = 0; j< friendData[i].scores[j]; i++){
+        //    //add together the absolute values of the differences between each //array location
+         //
+        //    difference += Math.abs(parseInt(userScores[j]) - parseInt(friendData[i].scores[j]));
+         //
+        //    console.log(difference);
+         //
+        //    if(difference <= bestFriend.setDiff){
+        //      bestFriend.name = friendData[i].name;
+        //      bestFriend.photo = friendData[i].photo;
+        //      bestFriend.setDiff = difference;
+        //    }
+        //  }
        }
 
 
