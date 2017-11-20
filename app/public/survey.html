@@ -12,10 +12,37 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" type="text/css" href="./stylehome.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+
+<style>
+
+
+body {
+  background: url("../images/dogs.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron {
+  margin-top: 20%;
+  background-color: rgba(0,0,0,0);
+  color: #f5f5f5;
+}
+
+a, h1, h3, h4, h6, label {
+  color: #f5f5f5;
+}
+
+a:hover {
+  color: #710000;
+}
+
+</style>
 
 
 </head>
@@ -172,7 +199,7 @@ This has made a lot of people very angry and been widely regarded as a bad move.
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">x</button>
-        <h2 class="modal-title"><strong>Best Friend</strong></h2>
+        <h2 class="modal-title text-center"><strong>Best Friend</strong></h2>
       </div>
 
       <div class="modal-body">
@@ -204,7 +231,7 @@ This has made a lot of people very angry and been widely regarded as a bad move.
     no_results_text: 'Oops, nothing found!'
   },
   '.chosen-select-width': {
-    width: "50%"
+    width: "100%"
   }
 }
 
@@ -238,10 +265,17 @@ var userData = {
         console.log(currentURL);
       //post to friends.js
 
-      $.post(currentURL + "/api/friends", userData, function(data){
+      $.ajax({
+  url: currentURL + "/api/friends",
+  method: 'POST'
+}).done(function(bestFriend)
+
+    //  app.post(currentURL + "/api/friends", userData, function(data)
+
+      {
         //  friendArr.push(userData);
-          $('#friendName').text(data.name);
-          $('#friendImg').attr("src", data.photo);
+          $('#friendName').text(bestFriend.name);
+          $('#friendImg').attr("src", bestFriend.photo);
           $('#modal').modal('toggle');
           //res.json(userData);
       });
