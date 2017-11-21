@@ -7,15 +7,25 @@ var app = express();
 
 
 
-var PORT = process.env.PORT || 8080;
- var bodyParser = require('body-parser')
+//allowing stacitc folder for usage
+app.use("/static/", express.static(path.join(__dirname, "app/public")));
+// htmlRoutes(app)
+// apiRoutes(app)
 
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({
+  type: 'application/vnd.api+json'
+}))
+
+
+var PORT = process.env.PORT || 8080;
+
+//app.use(express.static('public'));
 
 require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
