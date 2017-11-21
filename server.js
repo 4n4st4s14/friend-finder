@@ -9,6 +9,7 @@ var app = express();
 
 //allowing stacitc folder for usage
 app.use("/static/", express.static(path.join(__dirname, "app/public")));
+app.use("/public", express.static(path.join(__dirname, "app/public")));
 // htmlRoutes(app)
 // apiRoutes(app)
 
